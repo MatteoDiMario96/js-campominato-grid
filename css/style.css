@@ -27,4 +27,11 @@ article{
     border: 2px solid white;
     height:calc((100% / 10) - 4px);
     width: calc((100% / 10) - 4px);
+    color: white;
+}
+
+.active{
+    background-color: rgb(94, 94, 236);
+    color: black;
+
 }
