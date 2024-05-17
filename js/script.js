@@ -6,4 +6,8 @@ for(let i = 0; i < 100; i++){
     articleEl.append([i + 1])
     sectionGridAppend.appendChild(articleEl)
 
+
+    articleEl.addEventListener("click", function(){
+        articleEl.classList.add("active");
+    })
 }
