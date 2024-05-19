@@ -16,6 +16,7 @@ header > nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: #001533;
 }
 
 main {
@@ -23,6 +24,7 @@ main {
     justify-content: center;
     align-items: center;
     height: calc(100vh - 160px);
+    background-color: rgb(218, 216, 216);
     
 }
 
@@ -44,14 +46,14 @@ nav#footer{
 
 section#grid{
     
-    border: 2px solid white;
+    border: 2px solid rgb(0, 0, 0);
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     height: 600px;
     width: 600px;
-    background-color: rgb(6, 6, 118);
+    background-color: #009fbd;
 
 }
 
@@ -59,7 +61,7 @@ article{
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 2px solid white;
+    border: 2px solid rgb(5, 5, 5);
     height:calc(100% / 10);
     width: calc(100% / 10);
     color: white;
@@ -69,6 +71,10 @@ footer > nav > a {
     margin-left: .3rem;
     text-decoration: none;
     color: white;
+}
+
+header select {
+    padding: .2rem .4rem;
 }
 
 footer > nav > a:hover {
@@ -101,7 +107,6 @@ img {
 }
 
 .active{
-    background-color: rgb(94, 94, 236);
-    color: black;
-
+    background-color: #77037b;
+    color: #f9e2af;
 }
