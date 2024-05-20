@@ -1,49 +1,50 @@
 const sectionGridAppend = document.querySelector("section#grid");
-const mainAppend = document.querySelector("main");
+const buttonAppend = document.querySelector("button#new-match");
+const selectDifficultyAppend = document.querySelector("#difficult");
+
+const startFirstGame = document.createElement("h2");
+startFirstGame.append("Inizia la partita scegliendo la difficoltà e premendo il tasto play !");
+sectionGridAppend.appendChild(startFirstGame);
+
+buttonAppend.addEventListener("click",function(){
+    generateNewGame(sectionGridAppend, selectDifficultyAppend.value)
+    console.clear();
+    })
+
+    
+
+function generateNewGame (containerEl, difficultySelect){
+    containerEl.innerHTML = "";
 
 
-const buttonAppend = document.querySelector("button#new-match")
-const selectHardAppend = document.querySelector("#select-hard");
-const selectVeryHardAppend = document.querySelector("#select-very-hard");
-const selectCrazyAppend = document.querySelector("#select-crazy");
+    let cells;
+    let difficulty;
+    switch(selectDifficultyAppend.value){
+        case "hard":
+            cells = 100;
+            difficulty = "hard";
+            break;
+        case "very-hard":
+            cells = 81;
+            difficulty = "very-hard";
+            break;
+        case "crazy":
+            cells = 49;
+            difficulty = "crazy";
+            break;
+    }
 
-selectHardAppend.addEventListener("click",function(){
-    document.sectionGridAppend.innerHTML = `${getSquare(100)}`;
-})
-selectVeryHardAppend.addEventListener("click",function(){
-    getSquare(81);
-})
-selectCrazyAppend.addEventListener("click",function(){
-    getSquare(49);
-})
-
-getSquare(100);
-// document.querySelector("section#grid").innerHTML = getSquare(81);
-// console.log(getSquare(49))
-
-function getSquare (number){
-    for(let i = 0; i < number; i++){
+    for(let i = 0; i < cells; i++){
         const articleEl = document.createElement("article");
-        articleEl.classList.add("square");
+        articleEl.classList.add("square", difficulty);
         articleEl.append([i + 1])
         sectionGridAppend.appendChild(articleEl)
     
     
         articleEl.addEventListener("click", function(){
             articleEl.classList.add("active");
-            console.log(`This is the cell number: ${[i + 1]}`)
-        })
-        //Provare a mettere inner.HTML
-        // document.articleEl.innerHTML = articleEl Da vedere
-    //     
-    buttonAppend.addEventListener("click",function(){
-        articleEl.classList.remove("active");
-        console.clear();
-    // document.querySelector("section#grid").innerHTML  getSquare(100);
-    })
-
-
-
+            console.log(`You've clicked: ${[i + 1]}`)
+        })  
     }
 }
 

@@ -66,6 +66,18 @@ article{
     width: calc(100% / 10);
     color: white;
 }
+article.hard{
+    height:calc(100% / 10);
+    width: calc(100% / 10);
+}
+article.very-hard{
+    height:calc(100% / 9);
+    width: calc(100% / 9);
+}
+article.crazy{
+    height:calc(100% / 7);
+    width: calc(100% / 7);
+}
 
 footer > nav > a {
     margin-left: .3rem;
@@ -104,6 +116,14 @@ button {
 
 img {
     height: 100%;
+}
+
+h2 {
+    padding: 2rem;
+    line-height: 7rem;
+    font-size: 60px;
+    text-align: center;
+    color: #77037b;
 }
 
 .active{
